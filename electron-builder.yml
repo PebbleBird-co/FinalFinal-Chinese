@@ -1,0 +1,33 @@
+appId: co.pebblebird.finalfinal
+productName: Final-Final
+electronDist: node_modules/electron/dist
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**/*
+extraResources:
+  - from: LICENSE
+    to: LICENSE
+  - from: PRIVACY.md
+    to: PRIVACY.md
+  - from: THIRD_PARTY_NOTICES.md
+    to: THIRD_PARTY_NOTICES.md
+  - from: licenses
+    to: licenses
+asar: true
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: ${productName}-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Final-Final
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico

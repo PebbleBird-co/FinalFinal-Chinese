@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 99%;
+    --foreground: 211 29% 14%;
+    --border: 210 16% 87%;
+    --primary: 201 43% 27%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 210 17% 95%;
+    --muted-foreground: 212 12% 42%;
+    --accent: 41 52% 89%;
+    --accent-foreground: 32 48% 26%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply m-0 min-w-[320px] bg-background font-sans text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}

@@ -1,0 +1,63 @@
+name: Bug 报告
+description: 报告可重复出现的错误或回归
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传真实项目文件、私人路径、凭据或其他敏感信息。优先使用演示 Fixture 复现。
+
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本
+      placeholder: 例如 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: system
+    attributes:
+      label: 操作系统
+      placeholder: 例如 Windows 11 x64
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 说明实际行为以及为什么它是问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 最小复现步骤
+      placeholder: |
+        1. 运行 pnpm run fixture:demo
+        2. 选择 fixtures/demo-project
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充信息
+      description: 可提供经过脱敏的截图或日志，不要附带真实文件内容。
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我确认报告中没有真实用户文件、私人路径或凭据。
+          required: true

@@ -1,0 +1,7 @@
+node_modules
+out
+dist
+coverage
+playwright-report
+package-lock.json
+plan(3).md

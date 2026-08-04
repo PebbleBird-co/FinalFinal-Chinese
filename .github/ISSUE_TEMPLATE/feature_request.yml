@@ -1,0 +1,37 @@
+name: 功能建议
+description: 提议与本地只读调查定位一致的改进
+title: '[Feature] '
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景
+      description: 说明用户正在调查什么，以及现有流程哪里不足。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 描述期望行为，不需要先设计完整技术实现。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他方案
+      description: 列出考虑过的替代方式或临时解决办法。
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: MVP 边界
+      options:
+        - label: 建议不要求读取文件正文。
+          required: true
+        - label: 建议不要求上传数据或调用外部 AI API。
+          required: true
+        - label: 建议不要求移动、重命名、覆盖或删除原文件。
+          required: true
